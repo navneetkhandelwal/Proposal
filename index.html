@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #gif-container {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="proposal-container">
+  <h2>Do you love me?</h2>
+  <div id="gif-container">
+    <img id="proposal-gif" src="https://media1.tenor.com/m/E2_i2XDqoG4AAAAC/shakespaw.gif" alt="gif">
+  </div>
+  <button onclick="handleResponse(true)">Yes</button>
+  <button onclick="handleResponse(false)">No</button>
+</div>
+
+<script>
+  let responseCount = 0;
+
+  function handleResponse(response) {
+    responseCount++;
+    const gifContainer = document.getElementById('gif-container');
+    const proposalContainer = document.getElementById('proposal-container');
+    const gifImg = document.getElementById('proposal-gif');
+
+    if (response) {
+      gifContainer.style.display = 'block';
+      if (responseCount === 1) {
+        window.location.href = 'hehe-knew-it.html';
+      } else {
+        gifContainer.style.display = 'none';
+        window.location.href = 'hehe-knew-it.html';
+      }
+    } else {
+      if (responseCount === 1) {
+        gifImg.src = 'https://media1.tenor.com/m/urdRYKbF5ZIAAAAC/side-eye-bubu.gif';
+        proposalContainer.innerHTML = '<h2>Soch le yar ache se ek bar</h2><div id="gif-container"><img id="proposal-gif" src="https://media1.tenor.com/m/urdRYKbF5ZIAAAAC/side-eye-bubu.gif" alt="gif"></div><button onclick="handleResponse(true)">Yes</button><button onclick="handleResponse(false)">No</button>';
+      } else if (responseCount === 2) {
+        gifImg.src = 'https://media1.tenor.com/m/XdfzE7SfUdEAAAAC/dudu-bubu.gif';
+        proposalContainer.innerHTML = '<h2>Ek baar or sochle yar</h2><div id="gif-container"><img id="proposal-gif" src="https://media1.tenor.com/m/XdfzE7SfUdEAAAAC/dudu-bubu.gif" alt="gif"></div><button onclick="handleResponse(true)">Yes</button><button onclick="handleResponse(false)">No</button>';
+      } else if (responseCount === 3) {
+        gifImg.src = 'https://media1.tenor.com/m/Bvt5Yv4xvrYAAAAd/hay-nako-reika-teary-dudu.gif';
+        proposalContainer.innerHTML = '<h2>Manja na kitna bhav khayegi</h2><div id="gif-container"><img id="proposal-gif" src="https://media1.tenor.com/m/Bvt5Yv4xvrYAAAAd/hay-nako-reika-teary-dudu.gif" alt="gif"></div><button onclick="handleResponse(true)">Yes</button><button onclick="handleResponse(false)">No</button>';
+      } else if (responseCount === 4) {
+        gifImg.src = 'https://media1.tenor.com/m/cJwuW3Z1CzUAAAAC/bubu-dudu-kisses.gif';
+        proposalContainer.innerHTML = '<h2>Acha han ladkiyo ki na me bhi haan hoti hai, I love you tooo baby</h2><div id="gif-container"><img id="proposal-gif" src="https://media1.tenor.com/m/cJwuW3Z1CzUAAAAC/bubu-dudu-kisses.gif" alt="gif"></div>';
+      } else {
+        window.location.href = 'hehe-knew-it.html';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
